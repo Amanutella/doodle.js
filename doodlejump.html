@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doodle Jump</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DotGothic16&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stick&display=swap" rel="stylesheet">
+    <!-- Link para o Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="gamego.css">
+    <script src="doodlejump.js" defer></script>
+</head>
+<body>
+    <header class="py-5 text-center bg-black bg-gradient">
+        <h1 class="text-white">Jogo em andamento...</h1>
+    </header>
+    
+    <main class="container mt-5">
+        <div class="row">
+            <section id="game-container" class="col-md-8">
+                <canvas id="board"></canvas>
+            </section>
+            
+            <section id="info-section" class="col-md-4">
+                <!-- Instruções -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Como Jogar</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Seta para direita</strong> ou <strong>D</strong> para mover para a direita</li>
+                            <li><strong>Seta para esquerda</strong> ou <strong>A</strong> para mover para a esquerda</li>
+                            <li><strong>Plataforma</strong> ao subir te empulsiona para a proxima plataforma</li>
+                            <li><strong>Espaço</strong> para continuar jogando!</li>
+                            <li>Evite cair do mapa e tente alcançar a maior pontuação possível!</li>
+                            <li><strong>Bom Jogo!</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card de Feedback -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Gostou do jogo?</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="feedbackForm">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="feedback" id="likeYes" value="yes">
+                                <label class="form-check-label" for="likeYes">
+                                    Sim
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="feedback" id="likeNo" value="no">
+                                <label class="form-check-label" for="likeNo">
+                                    Não
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Enviar Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="bg-black text-white text-center py-3 mt-auto">
+        <p>&copy; 2024 Jujutsu Pulo</p>
+    </footer>
+
+</body>
+</html>
